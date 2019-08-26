@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<link href='https://fonts.googleapis.com/css?family=Armata' rel='stylesheet'>
   	<style>
       body {background-color: rgb(50,50,50);}
       p.decor {
             border-style: dashed;
             border-width: 2px;
+            }
+      .topnav {
+            overflow: hidden;
+            background-color: rgb(120,250,50);
+            }
+      .topnav a {
+            float: left;
+            font-family: Armata;
+            color: rgb(0,0,0);
+            text-align: center;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 17px;
             }
       span {font-family: Armata;
       		color: rgb(190,190,190);
@@ -16,17 +30,19 @@
       h1   {font-family: Armata;
       		color: rgb(250,250,250);
             font-size: 40px;
-            margin: 20px 150px 20px 150px;
+            margin: 40px 150px 20px 150px;
       		}
       h3   {font-family: Armata;
-      		color: rgb(230,230,250);
+            color: rgb(120,250,50);
             font-size: 25px;
             margin: 15px 150px 15px 150px;
+            align="left"
       		}
       h4   {font-family: Armata;
-      		color: rgb(230,200,40);
+      		color: rgb(210,210,250);
             font-size: 22px;
             margin: 10px 150px 10px 150px;
+            align="left"
       		}
       p    {font-family: Armata;
       		color: rgb(210,210,210);
@@ -36,19 +52,41 @@
     <title>Glen's Portfolio</title>
   </head>
   <body>
+  	<div class="topnav">
+      <a class="active" href="#About">About</a>
+      <a href="#Project">Projects</a>
+      <a href="#Games">Games</a>
+      <a href="#Contact">Contact</a>
+    </div>
     <h1 align="center">Portfolio</h2>
     <p class="decor"> </p>
     <span class="credits left">Portfolio maintained by <a href="https://github.com/glenchoy">glenchoy</a></span>
-    <h3 align="left">About</h3>
+    <h3 href="#About">About</h3>
     <ul>
    		<p>This is a test.</p>
     </ul>
     <p> &nbsp </p>
-    <h3 align="left">Projects</h3>
+    <h3>Projects</h3>
     <ul>
-      <h4 align="left">Nestle DVIR App</h4>
-      <p>This is a test.</p>
-    </u1>
+      <h4>Nestle DVIR App</h4>
+      <p>Mobile App Challenge 2019</p>
+      
+      <p>&nbsp</p>
+      
+      <h4>Ice Cream Shop</h4>
+      <p>Database Project</p>
+    </ul>
+    <p>&nbsp</p>
+    <h3 href="#Games">Games</h3>
+    <ul>
+      <h4>Bloom</h4>
+      <p>Completed June 2019</p>
+      
+      <p>&nbsp</p>
+      
+      <h4>Seek Quill</h4>
+      <p>Completed August 2019</p>
+    </ul>
     
     <!--comment-->
     
