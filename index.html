@@ -9,68 +9,73 @@
             border-style: dashed;
             border-width: 2px;
             }
-      .topnav {
-            overflow: hidden;
-            background-color: rgb(150,150,150);
+      .sidenav {
+      		height = 100%
+            width: 150px;
             position: fixed;
+            overflow-x: hidden;
+            background-color: rgb(150,150,150);
             z-index: 1;
             top: 0;
             left: 0;
+            padding-top: 10px;
+            padding-bottom: 100%;
             }
-      .topnav a {
-            float: left;
+      .sidenav a {
+            padding: 10px 20px 6px 15px;
             font-family: Armata;
-            color: rgb(0,0,0);
+            color: rgb(250,250,250);
             text-align: center;
-            padding: 10px 20px;
             text-decoration: none;
             font-size: 17px;
+            display: block;
             }
       span {font-family: Armata;
       		color: rgb(190,190,190);
             font-size: 10px;
-            margin: 0 150px 10px 150px;
+            margin: 0 100px 10px 150px;
       		}
       h1   {font-family: Armata;
       		color: rgb(250,250,250);
             font-size: 40px;
-            margin: 70px 150px 20px 150px;
+            margin: 40px 100px 25px 150px;
       		}
       h3   {font-family: Armata;
             color: rgb(120,250,50);
             font-size: 25px;
-            margin: 15px 150px 15px 150px;
+            margin: 25px 100px 15px 150px;
             align="left"
       		}
       h4   {font-family: Armata;
       		color: rgb(210,210,250);
             font-size: 22px;
-            margin: 10px 150px 10px 150px;
+            margin: 10px 100px 10px 150px;
             align="left"
       		}
       p    {font-family: Armata;
       		color: rgb(210,210,210);
-            margin: 5px 150px 5px 150px;}
+            margin: 5px 100px 5px 150px;}
     </style>
     <meta charset="utf-8">
     <title>Glen's Portfolio</title>
   </head>
   <body>
-  	<div class="topnav">
-      <a class="active" href="#About">About</a>
-      <a href="#Project">Projects</a>
+  	<div class="sidenav">
+      <a class="active" href="#Top">Top</a>
+      <a href="#About">About</a>
+      <a href="#Projects">Projects</a>
       <a href="#Games">Games</a>
       <a href="#Contact">Contact</a>
     </div>
-    <h1 align="center">Portfolio</h1>
+    <h1 id="Top" align="center">Portfolio</h1>
     <p class="decor"> </p>
     <span class="credits left">Portfolio maintained by <a href="https://github.com/glenchoy">glenchoy</a></span>
-    <h3 href="#About">About</h3>
+    <h3 id="About">About</h3>
     <ul>
    		<p>This is a test.</p>
     </ul>
     <p> &nbsp </p>
-    <h3>Projects</h3>
+    <h3 id="Projects">Projects</h3>
     <ul>
       <h4>Nestle DVIR App</h4>
       <p>Mobile App Challenge 2019</p>
@@ -81,7 +86,7 @@
       <p>Database Project</p>
     </ul>
     <p>&nbsp</p>
-    <h3 href="#Games">Games</h3>
+    <h3 id="Games">Games</h3>
     <ul>
       <h4>Bloom</h4>
       <p>Completed June 2019</p>
@@ -93,6 +98,12 @@
     </ul>
     
     <!--comment-->
+    
+    <script>
+      function Navigate() {
+        
+      }
+    </script>
     
   </body>
 </html>
