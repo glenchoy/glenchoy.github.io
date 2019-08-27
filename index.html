@@ -4,7 +4,11 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<link href='https://fonts.googleapis.com/css?family=Armata' rel='stylesheet'>
   	<style>
-      body {background-color: rgb(50,50,50);}
+      body {
+      		font-family: Armata;
+      		background-color: rgb(50,50,50);
+            margin: 0 100px 0 250px;
+            }
       p.decor {
             border-style: dashed;
             border-width: 2px;
@@ -15,7 +19,7 @@
             position: fixed;
             overflow-x: hidden;
             background-color: rgb(150,150,150);
-            z-index: 1;
+            z-index: 2;
             top: 0;
             left: 0;
             padding-top: 15px;
@@ -23,44 +27,84 @@
             }
       .sidenav a {
             padding: 10px 50px 10px 30px;
-            font-family: Armata;
             color: rgb(250,250,250);
             text-align: left;
             text-decoration: none;
             font-size: 17px;
             display: block;
             }
-      span {font-family: Armata;
+      .column {
+            float: left;
+            width: 25%;
+            padding: 0px;
+            }
+      .column img {
+            opacity: 0.8; 
+            cursor: pointer; 
+            }
+      .row:after {
+            content: "";
+            display: table;
+            clear: both;
+            }
+      .imgviewer {
+      		height: 0%;
+            width: 60%;
+            position: fixed;
+            display: none;
+            z-index: 1;
+          	}
+      #imgtext {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            color: white;
+            font-size: 20px;
+            }
+      .closeimgviewer {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: white;
+            font-size: 35px;
+            cursor: pointer;
+            }
+      span {
       		color: rgb(190,190,190);
             font-size: 10px;
-            margin: 0 100px 10px 250px;
+            margin: 0 0 10px 0;
       		}
-      h1   {font-family: Armata;
+      h1   {
       		color: rgb(250,250,250);
             font-size: 40px;
-            margin: 40px 100px 20px 250px;
+            margin: 40px 0 20px 0;
       		}
-      h3   {font-family: Armata;
+      h3   {
             color: rgb(120,250,50);
             font-size: 25px;
-            margin: 25px 100px 20px 250px;
+            margin: 25px 0 20px 0;
             align="left"
       		}
-      h4   {font-family: Armata;
+      h4   {
       		color: rgb(210,210,250);
             font-size: 22px;
-            margin: 10px 100px 10px 250px;
+            margin: 10px 0 10px 0;
             align="left"
       		}
-      p    {font-family: Armata;
+      p    {
       		color: rgb(210,210,210);
-            margin: 5px 100px 5px 250px;
+            margin: 5px 0 5px 0;
             font-size: 14px;}
     </style>
     <meta charset="utf-8">
     <title>Glen's Portfolio</title>
   </head>
   <body>
+  	<div class="imgviewer" id="viewer">
+      <span onclick="this.parentElement.style.display='none'" class="closeimgviewer">&times;</span>
+      <img id="expandedImage" >
+      <div id="imgtext"></div>
+    </div>
   	<div class="sidenav">
       <a class="active" href="#Top">Top</a>
       <a href="#About">About</a>
@@ -79,9 +123,24 @@
     <ul>
       <h4>Nestle DVIR App</h4>
       <p>Mobile App Challenge 2019</p>
+	  
+      <div class="row">
+        <div class="column">
+          <img src="Bloom/Title.png" alt="Test 1" style="width:100%" onclick="ExpandImage(this)";>
+        </div>
+        <div class="column">
+          <img src="Bloom/Title.png" alt="Test 2" style="width:100%" onclick="ExpandImage(this)";>
+        </div>
+        <div class="column">
+          <img src="Bloom/Title.png" alt="Test 3" style="width:100%" onclick="ExpandImage(this)";>
+        </div>
+        <div class="column">
+          <img src="Bloom/Title.png" alt="Test 4" style="width:100%" onclick="ExpandImage(this)";>
+        </div>
+      </div>
 
       <h4>Ice Cream Shop</h4>
-      <p>Database Project</p>
+      <p>SQL Database Project</p>
     </ul>
 
     <h3 id="Games">Games</h3>
@@ -96,12 +155,23 @@
     <ul>
       <h4>Email</h4>
       <p></p>
+    </ul>
     
     <!--comment-->
     
     <script>
       function Navigate() {
         
+      }
+      
+      function ExpandImage(img) {
+      	var viewer = document.getElementById("viewer");
+      	var expand = document.getElementById("expandedImage");
+        var imgText = document.getElementById("imgtext");
+        expand.src = img.src;
+        imgText.innerHTML = img.alt;
+        viewer.style.display = "block";
+        viewer.style.height = "100%";
       }
     </script>
     
