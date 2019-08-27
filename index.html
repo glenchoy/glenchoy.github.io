@@ -101,8 +101,8 @@
   </head>
   <body>
   	<div class="imgviewer" id="viewer">
-      <span onclick="this.parentElement.style.display='none'" class="closeimgviewer">&times;</span>
-      <img id="expandedImage" >
+      <span onclick="UnexpandImage()" class="closeimgviewer">&times;</span>
+      <img src="" id="expandedImage" style="height:0%">
       <div id="imgtext"></div>
     </div>
   	<div class="sidenav">
@@ -172,6 +172,16 @@
         imgText.innerHTML = img.alt;
         viewer.style.display = "block";
         viewer.style.height = "100%";
+        expand.style.height = "100%";
+      }
+      
+      function UnexpandImage() {
+      	var viewer = document.getElementById("viewer");
+      	var expand = document.getElementById("expandedImage");
+        var imgText = document.getElementById("imgtext");
+        viewer.style.height = "0%";
+        expand.style.height = "0%";
+        viewer.style.display = "none";
       }
     </script>
     
