@@ -55,7 +55,7 @@
             position: fixed;
             display: none;
             z-index: 1;
-            background-color: rgba(0,0,0,0.5);
+            background-color: rgba(0,0,0,0.8);
           	}
       .imgmodal {
       		display: none;
@@ -67,7 +67,7 @@
       #imgtext {
             position: absolute;
             left: 0;
-            top: 20px;
+            top: 5%;
             width: 100%;
             color: white;
             text-align: center;
@@ -75,8 +75,8 @@
             }
       .closeimgviewer {
             position: absolute;
-            top: 0px;
-            right: 25px;
+            top: 2.5%;
+            right: 5%;
             color: white;
             font-size: 35px;
             cursor: pointer;
@@ -117,11 +117,6 @@
       <span onclick="UnexpandImage()" class="closeimgviewer">&times;</span>
       <img class="imgmodal" src="" id="expandedImage">
     </div>
-    <div>
-        
-        
-    	
-    </div>
   	<div class="topnav">
       <a class="active" href="#Top">Top</a>
       <a href="#About">About</a>
@@ -139,7 +134,7 @@
     <h3 id="Projects">Projects</h3>
     <ul>
       <h4>Nestle DVIR App</h4>
-      <p>Mobile App Challenge 2019</p>
+      <p style="margin:0 0 10px 0">Mobile App Challenge 2019</p>
 	  
       <div class="row">
         <div class="column">
@@ -157,16 +152,46 @@
       </div>
 
       <h4>Ice Cream Shop</h4>
-      <p>SQL Database Project</p>
+      <p style="margin:0 0 10px 0">SQL Database Project</p>
+      
+      <div class="row">
+        <div class="column">
+          <img src="Ice Cream Shop/Relational_Schema.png" alt="Relational Schema" style="width:90%" onclick="ExpandImage(this)";>
+        </div>
+      </div>
     </ul>
 
     <h3 id="Games">Games</h3>
     <ul>
       <h4>Bloom</h4>
-      <p>Completed June 2019</p>
+      <p style="margin:0 0 10px 0">Completed June 2019</p>
+      
+      <div class="column">
+        <img src="Bloom/Title.png" alt="Title" style="width:90%" onclick="ExpandImage(this)";>
+      </div>
+      <div class="column">
+        <img src="Bloom/Screenshot_1.png" alt="Screenshot 1" style="width:90%" onclick="ExpandImage(this)";>
+      </div>
+      <div class="column">
+        <img src="Bloom/Screenshot_2.png" alt="Screenshot 2" style="width:90%" onclick="ExpandImage(this)";>
+      </div>
+      <div class="column">
+        <img src="Bloom/Screenshot_3.png" alt="Screenshot 3" style="width:90%" onclick="ExpandImage(this)";>
+      </div>
       
       <h4>Seek Quill</h4>
-      <p>Completed August 2019</p>
+      <p style="margin:0 0 10px 0">Completed August 2019</p>
+      
+      <div class="column">
+        <img src="Seek Quill/Title.png" alt="Title" style="width:90%" onclick="ExpandImage(this)";>
+      </div>
+      <div class="column">
+        <img src="Seek Quill/Screenshot_1.png" alt="Screenshot 1" style="width:90%" onclick="ExpandImage(this)";>
+      </div>
+      <div class="column">
+        <img src="Seek Quill/Screenshot_2.png" alt="Screenshot 2" style="width:90%" onclick="ExpandImage(this)";>
+      </div>
+      
     </ul>
     <h3 id="Contact">Contact</h3>
     <ul>
