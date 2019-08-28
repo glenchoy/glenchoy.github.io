@@ -13,9 +13,9 @@
             border-style: dashed;
             border-width: 2px;
             }
-      .sidenav {
-      		height = 100%
-            width = 25%;
+      .topnav {
+      		height: 110%;
+            width: 25%;
             position: fixed;
             overflow-x: hidden;
             background-color: rgb(150,150,150);
@@ -25,7 +25,8 @@
             padding-top: 15px;
             padding-bottom: 100%;
             }
-      .sidenav a {
+      .topnav a {
+      		float: left;
             padding: 10px 30px 10px 25px;
             color: rgb(250,250,250);
             text-align: left;
@@ -48,9 +49,9 @@
             clear: both;
             }
       .imgviewer {
-      		height: 0%;
-            width: 100%;
-            left: 0px;
+      		height: 100%;
+            width: 75%;
+            left: 25%;
             top: 0;
             position: fixed;
             display: none;
@@ -58,17 +59,17 @@
             background-color: rgba(0,0,0,0.5);
           	}
       .imgmodal {
-      		position: absolute;
-            top: 50px;
-            margin-left: 262px;
-            width: 65%;
-            max-width: 700px;
-            display: block;
+      		display: none;
+      		text-align: center;
+            height: 80%;
+            
+            margin: 20% auto;
+            z-index = 4;
             }
       #imgtext {
             position: absolute;
-            left: 75px;
-            top: 10px;
+            left: 0;
+            top: 20px;
             width: 100%;
             color: white;
             text-align: center;
@@ -115,11 +116,15 @@
   <body>
   	<div class="imgviewer" id="viewer">
       <div id="imgtext"></div>
-      <img class="imgmodal" src="" id="expandedImage" align="center"
-      top="50px">
       <span onclick="UnexpandImage()" class="closeimgviewer">&times;</span>
+      <img class="imgmodal" src="" id="expandedImage">
     </div>
-  	<div class="sidenav">
+    <div>
+        
+        
+    	
+    </div>
+  	<div class="topnav">
       <a class="active" href="#Top">Top</a>
       <a href="#About">About</a>
       <a href="#Projects">Projects</a>
@@ -186,6 +191,7 @@
         imgText.innerHTML = img.alt;
         viewer.style.display = "block";
         viewer.style.height = "100%";
+        expand.style.display = "block";
       }
       
       function UnexpandImage() {
@@ -194,6 +200,7 @@
         var imgText = document.getElementById("imgtext");
         viewer.style.height = "0%";
         viewer.style.display = "none";
+        expand.style.display = "none";
       }
     </script>
     
